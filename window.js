@@ -1,5 +1,6 @@
 const { BrowserWindow, app, Menu } = require('electron');
 const path = require('path');
+const { autoUpdater } = require("electron-updater");
 
 function createWindow() {
   const win = new BrowserWindow({
@@ -13,5 +14,8 @@ function createWindow() {
   win.loadFile('index.html');
 
   Menu.setApplicationMenu(null);
+  autoUpdater.autoDownload = true;
+  autoUpdater.autoInstallOnAppQuit = true;
+  autoUpdater.checkForUpdates();
 }
 app.whenReady().then(createWindow);

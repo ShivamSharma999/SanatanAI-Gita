@@ -750,7 +750,7 @@ select:focus {
 
 .showcase {
   margin-top: 1rem;
-  background: url(/assets/main.png) !important;
+  background: url(./assets/main.png) !important;
   background-size: cover !important;
   aspect-ratio: 3/1;
   h1 {
